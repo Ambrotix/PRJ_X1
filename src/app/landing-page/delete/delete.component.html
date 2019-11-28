@@ -1,0 +1,27 @@
+<div class="container-fluid well">    
+  <div class="row">
+    <div class="col-md-2 sidenav">
+      <!-- <label class="control-label form-control"></label> -->
+      <div class="row btn-group col-md-12">
+        <a class="btn btn-primary col-md-4" (click)="back()">Back</a>
+        <a class="btn btn-danger col-md-4" (click)="delete()">Delete</a>
+      </div>
+    </div>
+    <div class="col-md-8">
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-md-2 sidenav">
+    </div>
+    <div class="col-md-8">
+      <div class="col-md-12">
+        <label class="control-label">Name:</label>
+        <input disabled [(ngModel)]="deleteName" type="text" class="form-control" placeholder="Enter name"/>
+      </div>
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>

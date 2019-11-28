@@ -1,0 +1,52 @@
+<div class="container-fluid">    
+  <div class="row well">
+    <div class="col-md-2 sidenav">
+      <!-- <label class="control-label form-control"></label> -->
+      <div class="row col-md-12">
+      </div>
+      <br/>
+      <br/>
+      <div class="row btn-group col-md-12">
+        <!-- <a class="btn btn-primary col-md-4" (click)="addNew()">Add</a>
+        <a class="btn btn-primary col-md-4" (click)="clear()">Clear List</a>
+        <a class="btn btn-primary col-md-4" (click)="clearNew()">New</a> -->
+        <!-- <a class="btn btn-primary col-md-4">Delete</a> -->
+      </div>
+    </div>
+    <div class="col-md-8">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <!-- <td class="col-md-2">Id</td> -->
+            <td class="col-md-8">Name</td>
+            <td class="col-md-3">Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input [(ngModel)]="selected.name" type="text" class="form-control" placeholder="Enter name"/>
+            </td>
+            <td>
+              <a class="btn btn-primary col-md-4" *ngIf="!trigAddNew" (click)="addNew(i)">Add</a>
+              <a class="btn btn-primary col-md-4" *ngIf="trigAddNew" (click)="clearNew()">New</a>
+              <a class="btn btn-primary col-md-4" (click)="clear()">Clear List</a>
+              <!-- <a class="btn btn-primary col-md-4" (click)="onSelect(l.id)">Edit</a> -->
+            </td>
+          </tr>
+          <tr *ngFor="let l of list; let i = index;" >
+            <!-- <td >{{l.id}}</td> -->
+            <td >{{l.name}}</td>
+            <td>
+              <a class="btn btn-primary col-md-4" (click)="onSelect(i, l.name)">Edit</a>
+              <a class="btn btn-primary col-md-4" (click)="delete(l.name)">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <label class="control-label form-control"></label> -->
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
